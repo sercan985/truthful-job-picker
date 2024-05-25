@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <form id="sign-up-form">
+            <h1>Sign Up</h1>
+            <div class="form-group">
+                <label for="first-name">First Name</label>
+                <input type="text" value="John" id="first-name" name="firstName" required>
+            </div>
+            <div class="form-group">
+                <label for="last-name">Last Name</label>
+                <input type="text" value="Doe" id="last-name" name="lastName" required>
+            </div>
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="number" id="age" value=18 name="age" required>
+            </div>
+            <div class="form-group">
+                <label for="occupation">Occupation</label>
+                <select class="large_input" id = "occupation">  </select>  
+            </div>
+            <button type="button" id="start-quiz-btn">Register</button>
+        </form>
+
+        <div id="quiz-container" class="hidden">
+            <h2>Please verify your occupation</h2>
+            <div id="quiz-questions"></div>
+            <button type="button" id="submit-quiz-btn">Submit Answer</button>
+        </div>
+    </div>
+
+    <!-- Popup Container -->
+    <div id="popup" class="popup hidden">
+        <div class="popup-content">
+            <span class="close-btn" id="close-popup">&times;</span>
+            <p id="popup-message"></p>
+        </div>
+    </div>
+
+    <div id="popup-noclose" class="popup hidden">
+        <div class="popup-content">
+            <p id="popup-message-noclose"></p>
+        </div>
+    </div>
+
+</body>
+</html>
